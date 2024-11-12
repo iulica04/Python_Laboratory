@@ -11,7 +11,9 @@ class Queue:
     def pop(self):
         if not self.items:
             return None
-        return self.items.pop(0)
+        item = self.items[0]
+        self.items.remove(self.items[0])
+        return item
 
     def peek(self):
         if not self.items:
@@ -26,9 +28,9 @@ class Queue:
 
 if __name__ == '__main__':
     queue = Queue()
-    queue.push(1)
-    queue.push(2)
-    queue.push(3)
+    queue.push(10)
+    queue.push(20)
+    queue.push(30)
     print(queue.pop())
     print(queue.peek())
     print(queue.is_empty())

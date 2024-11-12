@@ -22,6 +22,7 @@ class Matrix:
 
     def multiply(self, matrix):
         if self.m != matrix.n:
+            print("Matrix multiplication is not possible: n and m must to be equal.")
             return None
 
         result = Matrix(self.n, matrix.m)
@@ -42,10 +43,10 @@ class Matrix:
 
 if __name__ == '__main__':
     matrix = Matrix(2, 2)
-    matrix.set(0, 0, 1)
-    matrix.set(0, 1, 2)
-    matrix.set(1, 0, 3)
-    matrix.set(1, 1, 4)
+    matrix.set(0, 0, 10)
+    matrix.set(0, 1, 20)
+    matrix.set(1, 0, 30)
+    matrix.set(1, 1, 40)
     print("Matrix 1:")
     print(matrix)
     print()

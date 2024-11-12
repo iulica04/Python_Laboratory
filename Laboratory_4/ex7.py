@@ -34,4 +34,4 @@ def pairwise_set_operations(*sets):
 
 
 if __name__ == "__main__":
-    print(pairwise_set_operations({1,2}, {2,3}))
+    print(pairwise_set_operations({1,2}, {2,3}, {3, 4}))

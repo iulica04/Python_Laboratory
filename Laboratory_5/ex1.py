@@ -11,7 +11,9 @@ class Stack:
     def pop(self):
         if not self.items:
             return None
-        return self.items.pop()
+        item = self.items[-1]
+        self.items.remove(self.items[-1])
+        return item
 
     def peek(self):
         if not self.items:
@@ -27,9 +29,9 @@ class Stack:
 
 if __name__ == '__main__':
     stack = Stack()
-    stack.push(1)
-    stack.push(2)
-    stack.push(3)
+    stack.push(10)
+    stack.push(20)
+    stack.push(30)
     print(stack.pop())
     print(stack.peek())
     print(stack.is_empty())
